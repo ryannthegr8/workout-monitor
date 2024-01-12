@@ -20,10 +20,10 @@
                 <div class="button">
                     <a href="/totalData" >Overall</a>
                 </div>
-                <form method="post" action="{{ route('/') }}" accept-charset="utf-8">
+                <form method="post" action="{{route('save')}}" accept-charset="utf-8">
                     {{ csrf_field() }}
         
-                    <label for="listItem">New ToDo Item</label><br>
+                    <label for="listItem">Push Up</label><br>
                     <input type="text" name="listItem" style="color: black;"><br>
                     <button>Save Item</button>
                     </form>

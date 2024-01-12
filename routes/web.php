@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\workoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'pages.welcome');
 Route::view('/totalData', 'pages.totalData');
+Route::post('/save', [workoutController::class, 'save'])-> name('save');
