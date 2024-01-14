@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('list_workouts', function (Blueprint $table) {
             $table->id();
-            $table->string('Workout');
+            $table->integer('pushUp');
             $table->timestamps();
         });
     }

@@ -14,20 +14,20 @@
        
     </head>
     <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            <div style="color: white">
-                <h1>MY PERSONAL TRAINER APP</h1>
-                <div class="button">
-                    <a href="/totalData" >Overall</a>
-                </div>
-                <form method="post" action="{{route('save')}}" accept-charset="utf-8">
-                    {{ csrf_field() }}
-        
-                    <label for="listItem">Push Up</label><br>
-                    <input type="text" name="listItem" style="color: black;"><br>
-                    <button>Save Item</button>
-                    </form>
+        <div class="homeContainer">
+            <h1>PERSONAL TRAINER APP</h1>
+            <div class="dataInput">
+                <h3>You may record your workout below</h3>
+                <form action="{{route('save')}}" method="post">
+                    {{csrf_field()}}
+                    <div>
+                        <label for="pushUp">Push Up</label>
+                        <input type="text" name="pushUp">
+                    </div>
+                    <button>Save All</button>
+                </form>
             </div>
+            <button><a href="/totalData">View done exercises</a></button>
         </div>
     </body>
 </html>
